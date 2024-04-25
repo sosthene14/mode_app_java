@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/men"
+        android:title="@string/men"
+        android:icon="@drawable/man"/>
+    <item
+        android:id="@+id/child"
+        android:title="@string/child"
+        android:icon="@drawable/child"/>
+    <item
+        android:id="@+id/woman"
+        android:title="@string/woman"
+        android:icon="@drawable/womangirl"/>
+
+</menu>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/custom_black"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment">
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="325dp"
+        android:layout_height="225dp"
+        android:autoStart="true"
+        android:flipInterval="30000"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288">
+
+        <ImageView
+            android:id="@+id/girlpant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:background="@drawable/custom_shadow"
+            android:contentDescription="@string/description"
+            android:elevation="5dp"
+            android:padding="15dp"
+            app:srcCompat="@drawable/girlpant" />
+
+        <ImageView
+            android:id="@+id/manpant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:background="@drawable/custom_shadow"
+            android:contentDescription="@string/description"
+            android:elevation="5dp"
+            android:padding="15dp"
+            app:srcCompat="@drawable/manpant" />
+    </ViewFlipper>
+
+    <TextView
+        android:id="@+id/left_arrow"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:drawableEndCompat="@drawable/leftcirclearrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/viewFlipper"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/right_arrow"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:drawableStartCompat="@drawable/rightcirclearrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/viewFlipper"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357"
+        android:focusable="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="40dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/viewFlipper2"
+        app:layout_constraintTop_toBottomOf="@+id/viewFlipper"
+        app:layout_constraintVertical_bias="0.504"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:autoStart="true"
+        android:flipInterval="30000"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFlipper"
+        app:layout_constraintVertical_bias="0.3">
+
+        <Button
+            android:id="@+id/woman_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/custom_green"
+            android:fontFamily="@font/langar"
+            android:text="@string/femme"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewFlipper"
+            app:layout_constraintVertical_bias="0.245"
+            tools:text="@string/femme" />
+
+        <Button
+            android:id="@+id/man_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/custom_green"
+            android:fontFamily="@font/langar"
+            android:text="@string/homme"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.449"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewFlipper"
+            app:layout_constraintVertical_bias="0.059"
+            tools:text="@string/homme" />
+
+
+    </ViewFlipper>
+
+    <TextView
+        android:drawablePadding="10dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/langar"
+        android:text="@string/stan_mode"
+        android:textColor="#CDCDCD"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/viewFlipper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableEndCompat="@drawable/cut" />
+</androidx.constraintlayout.widget.ConstraintLayout>
